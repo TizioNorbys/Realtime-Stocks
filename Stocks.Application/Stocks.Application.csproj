@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stocks.Domain\Stocks.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="FluentResults" Version="3.16.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Validators\" />
+    <None Remove="Services\" />
+    <None Remove="DTOs\" />
+    <None Remove="Errors\" />
+    <None Remove="Errors\Stocks\" />
+    <None Remove="Errors\Validation\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="Abstractions\" />
+    <None Remove="Abstractions\Authentication\" />
+    <None Remove="Abstractions\Clients\" />
+    <None Remove="DTOs\Base\" />
+    <None Remove="Services\Stocks\" />
+    <None Remove="DTOs\Stocks\" />
+    <None Remove="DTOs\Authentication\" />
+    <None Remove="Services\Authentication\" />
+    <None Remove="Errors\Authentication\" />
+    <None Remove="Validators\Authentication\" />
+    <None Remove="Validators\Stocks\" />
+    <None Remove="DTOs\Stocks\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validators\" />
+    <Folder Include="Services\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Errors\" />
+    <Folder Include="Errors\Stocks\" />
+    <Folder Include="Errors\Validation\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Abstractions\" />
+    <Folder Include="Abstractions\Authentication\" />
+    <Folder Include="Abstractions\Clients\" />
+    <Folder Include="DTOs\Base\" />
+    <Folder Include="Services\Stocks\" />
+    <Folder Include="DTOs\Stocks\" />
+    <Folder Include="DTOs\Authentication\" />
+    <Folder Include="Services\Authentication\" />
+    <Folder Include="Errors\Authentication\" />
+    <Folder Include="Validators\Authentication\" />
+    <Folder Include="Validators\Stocks\" />
+    <Folder Include="DTOs\Stocks\Base\" />
+  </ItemGroup>
+</Project>

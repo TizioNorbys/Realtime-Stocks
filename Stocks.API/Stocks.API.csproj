@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3a558e6f-34a8-407d-8d60-7baf841ce622</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'StocksApi.API' " />
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="Extensions\" />
+    <None Remove="OptionsSetup\" />
+    <None Remove="Serialization\" />
+    <None Remove="ErrorHandling\" />
+    <None Remove="Models\" />
+    <None Remove="Models\Responses\" />
+    <None Remove="Models\Responses\Account\" />
+    <None Remove="Middlewares\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="OptionsSetup\" />
+    <Folder Include="Serialization\" />
+    <Folder Include="ErrorHandling\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Responses\" />
+    <Folder Include="Models\Responses\Account\" />
+    <Folder Include="Middlewares\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stocks.Application\Stocks.Application.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Stocks.Infrastracture\Stocks.Infrastracture.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
